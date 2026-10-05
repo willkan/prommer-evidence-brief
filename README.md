@@ -36,7 +36,7 @@ The CLI runs in an isolated directory, with a read-only sandbox and shell/browse
 
 ## The failure that changed the design
 
-An initial SDK experiment hit a schema-transport error, then model availability errors. More significantly, an eventual live draft-and-review run passed while overstating a source recommendation as a general cause of enterprise failure. Human inspection caught that semantic error.
+An initial SDK experiment hit a schema-transport error, then model availability errors. More significantly, an eventual live draft-and-review run passed while overstating a source recommendation as a general cause of enterprise failure. A further AI-assisted, source-by-source review caught that semantic error.
 
 The final contract removes the free-form factual observation field. Models select exact excerpts and propose questions; deterministic checks enforce excerpt provenance. Codex CLI is now the only execution path; the SDK branch was removed rather than retained as fallback.
 
