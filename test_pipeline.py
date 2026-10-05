@@ -12,7 +12,7 @@ class ContractTests(unittest.TestCase):
             title=f"Source {i}", text=f"The site describes engineering tradeoffs in case {i}.",
             sha256="a" * 64, fetched_at="2026-10-05T00:00:00Z") for i in range(1, 4)]
         self.brief = Brief(angles=[Angle(id=i, source_id=f"s{i}",
-            observation=f"The site describes case {i}.", quote=self.sources[i-1].text,
+            quote=self.sources[i-1].text,
             question="Which tradeoff would you measure first?") for i in range(1, 4)])
         self.review = Review(verdicts=[Verdict(angle_id=i, supported=True,
             question_has_false_premise=False, reason="Supported by the cited text.") for i in range(1,4)])
@@ -70,7 +70,7 @@ class ContractTests(unittest.TestCase):
             self.assertEqual(manifest["stage"], "fetch")
 
     def test_real_quote_does_not_override_semantic_rejection(self):
-        self.brief.angles[0].observation = "This engineering approach guarantees a million dollars."
+        self.brief.angles[0].question = "How did this engineering approach guarantee a million dollars?"
         validate_evidence(self.brief, self.sources)
         self.review.verdicts[0].supported = False
         self.review.verdicts[0].reason = "The source does not establish a revenue outcome."

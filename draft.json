@@ -1,0 +1,22 @@
+{
+  "angles": [
+    {
+      "id": 1,
+      "source_id": "s1",
+      "quote": "Most teams reach for a gateway before the problem justifies one.",
+      "question": "Which measurable thresholds justify an LLM gateway, and what operational costs indicate that going direct remains the better choice?"
+    },
+    {
+      "id": 2,
+      "source_id": "s2",
+      "quote": "The fix that worked was crediting outcomes over tools",
+      "question": "How did you measure whether outcome-based credit improved AI adoption without weakening accountability for failures or low-quality work?"
+    },
+    {
+      "id": 3,
+      "source_id": "s3",
+      "quote": "A date is set before the spike goes live. On that date the numbers decide.",
+      "question": "Which precommitted metric decides whether a spike scales or dies, and how do you prevent noisy early data from killing a promising venture?"
+    }
+  ]
+}

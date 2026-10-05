@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-10-05T09:31:45.499642+00:00",
+  "status": "approved",
+  "model": null,
+  "audience": "founders and podcast bookers",
+  "calls": [
+    {
+      "stage": "draft",
+      "seconds": 23.81,
+      "provider": "codex-cli",
+      "requested_model": null,
+      "usage": {
+        "input_tokens": 20893,
+        "cached_input_tokens": 0,
+        "output_tokens": 315,
+        "reasoning_output_tokens": 142
+      }
+    },
+    {
+      "stage": "review",
+      "seconds": 23.4,
+      "provider": "codex-cli",
+      "requested_model": null,
+      "usage": {
+        "input_tokens": 21066,
+        "cached_input_tokens": 0,
+        "output_tokens": 369,
+        "reasoning_output_tokens": 150
+      }
+    }
+  ],
+  "stage": "render",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://prommer.net/en/tech/",
+      "title": "CTO & AI Leadership Consulting Services",
+      "sha256": "bbd5ade06540cc67d83c848356a97a2aa89ca5ed5e43b127ed05b1fa219a9d8c",
+      "fetched_at": "2026-10-05T09:31:46.374874+00:00"
+    },
+    {
+      "id": "s2",
+      "url": "https://prommer.net/en/tech/press/",
+      "title": "Thomas Prommer | Press & Newsroom",
+      "sha256": "df7f501e33b55d90f21f19e3c3e28aa62c7f4726b070e47780d9a81cb8e24719",
+      "fetched_at": "2026-10-05T09:31:47.103595+00:00"
+    },
+    {
+      "id": "s3",
+      "url": "https://prommer.net/en/ventures/",
+      "title": "Techventurist — Finding and Testing Ventures with an Agent Fleet",
+      "sha256": "799044b18784675176da77ff52e3abcdc5aa3495c709b144b16f6bf15a60dac3",
+      "fetched_at": "2026-10-05T09:31:47.829308+00:00"
+    }
+  ],
+  "completed_at": "2026-10-05T09:32:35.048943+00:00",
+  "output": "index.html"
+}

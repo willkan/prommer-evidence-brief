@@ -18,7 +18,6 @@ class Source(StrictModel):
 
 class Angle(StrictModel):
     id: int
-    observation: str = Field(min_length=10, max_length=350)
     source_id: str
     quote: str = Field(min_length=15, max_length=180)
     question: str = Field(min_length=10, max_length=350)
@@ -72,9 +71,9 @@ def render(brief: Brief, review: Review, sources: list[Source], audience: str) -
     for angle in brief.angles:
         source = by_id[angle.source_id]
         cards.append(f'''<article><span class="number">0{angle.id}</span>
-        <h2>{escape(angle.observation)}</h2>
+        <p class="label">FROM THE SOURCE</p><h2>“{escape(angle.quote)}”</h2>
         <p class="label">ASK THIS</p><p class="question">{escape(angle.question)}</p>
-        <details><summary>Check the evidence</summary><blockquote>{escape(angle.quote)}</blockquote>
+        <details><summary>Check the evidence</summary>
         <a href="{escape(source.url, quote=True)}" rel="noopener noreferrer">{escape(source.title)}</a>
         <p class="meta">Fetched {escape(source.fetched_at)} · SHA-256 {source.sha256[:12]}</p></details></article>''')
     return '''<!doctype html><html lang="en"><meta charset="utf-8">
